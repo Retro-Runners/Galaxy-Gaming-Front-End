@@ -25,3 +25,4 @@ jobs:
             VALIDATE_TYPESCRIPT_ES: true
             VALIDATE_TYPESCRIPT_STANDARD: true
             VALIDATE_HTML: true
+            VALIDATE_CSS: true
