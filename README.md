@@ -1,4 +1,6 @@
-# ECommerce
+# Galaxy Gaming Front end
+
+[![GitHub Super-Linter](https://github.com/Retro-Runners/Galaxy-Gaming-Front-End/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.3.
 
