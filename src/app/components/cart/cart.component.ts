@@ -41,4 +41,12 @@ export class CartComponent implements OnInit {
     this.router.navigate(['/home']);
   }
 
+  remove(product:Product){
+    const index = this.cartProducts.indexOf(product,0)
+    if(index > -1){
+      this.cartProducts.splice(index,1);
+      this.totalPrice = this.totalPrice - product.price;
+    }
+  }
+
 }

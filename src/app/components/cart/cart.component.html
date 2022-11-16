@@ -15,6 +15,9 @@
             <td>{{product.quantity}}</td>
             <td>{{product.product.description}}</td>
         </tr>
+        <tr *ngFor="let product of products;">
+          <!-- <button type="button" (click)="remove(this.product)">X</button> -->
+        </tr>
     </tbody>
 </table>
 <button class="btn btn-danger" [routerLink]="['/home']">Back</button>
