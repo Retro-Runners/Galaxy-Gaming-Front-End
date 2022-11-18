@@ -14,7 +14,7 @@
             <td>{{product.product.name}}</td>
             <td>{{product.quantity}}</td>
             <td>{{product.product.description}}</td>
-            <button type="button" (click)="remove(product.product)">Remove</button>
+            <button class="btn btn-danger" type="button" (click)="removeFromCart(product.product)">Remove</button>
         </tr>
         
     </tbody>
