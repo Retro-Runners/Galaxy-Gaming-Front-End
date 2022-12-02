@@ -1,1 +1,66 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'Bungee';
+    src: url('assets/fonts/Bungee-Regular.ttf');
+}
+
+* {
+    font-family: 'Roboto';
+}
+
+
+@font-face {
+    font-family: 'Roboto-Black';
+    src: url('assets/fonts/Roboto-Black.ttf')
+}
+
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('assets/fonts/Roboto-Bold.ttf')
+}
+
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: url('assets/fonts/Roboto-Medium.ttf')
+}
+
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url('assets/fonts/Roboto-Light.ttf')
+}
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('assets/fonts/Roboto-Regular.ttf')
+}
+
+@font-face {
+    font-family: 'Roboto-Thin';
+    src: url('assets/fonts/Roboto-Thin.ttf')
+}
+
+body{
+    background-color: #73bda8;
+    color: #cc6b49;
+}
+body.dark-theme{
+    background-color: #000000;
+    color: #002dd1;
+}button{
+    background-color: #ece6c2;
+}
+button.dark-theme{
+    background-color: #00e7ec;
+}
+.navbar{
+    background-color: #ece6c2;
+    color: #cc6b49;
+}
+.navbar.dark-theme{
+    background-color: #000000;
+    color: #002dd1;
+}
+button:hover{
+    background-color: #73bda8;
+    color:#ece6c2;
+}
