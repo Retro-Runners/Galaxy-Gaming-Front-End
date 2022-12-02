@@ -49,14 +49,12 @@ export class CartComponent implements OnInit {
     quantity: number
   }): void {
 
-    // get hijacked
     let index = this.products.indexOf(product)
-    console.log(index)
 
     const prod = this.products[index]
 
     if(prod.quantity > 1){
-      prod.quantity = prod.quantity -1
+      prod.quantity = prod.quantity - 1
     } 
     else if(prod.quantity === 1){
       this.products.splice(index,1);
