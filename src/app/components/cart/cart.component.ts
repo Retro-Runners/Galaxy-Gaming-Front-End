@@ -35,48 +35,39 @@ export class CartComponent implements OnInit {
   }
 
   emptyCart(): void {
-    let cart = {
+    let cartProducts = {
       cartCount: 0,
       products: [],
       totalPrice: 0.00
     };
-    this.productService.setCart(cart);
+    this.productService.setCart(cartProducts);
     this.router.navigate(['/home']);
   }
 
-  removeFromCart(product: Product): void {
+  removeFromCart(product: {
+    product: Product,
+    quantity: number
+  }): void {
 
-    let inCart = true;
-    
-    const index = this.cartProducts.indexOf(product)
+    // get hijacked
+    let index = this.products.indexOf(product)
+    console.log(index)
 
-    this.products.forEach(
-      (element) => {
-        if(element.product == product && index > -1 && element.quantity > 1 && this.cartCount > 0 && inCart == true){
-          --element.quantity;
-          let cart = {
-            cartCount: this.cartCount - 1,
-            products: this.products,
-            totalPrice: this.totalPrice - product.price
-          };
-          this.productService.setCart(cart);
-          return;
-        };
-        if(element.product == product && index > -1 && element.quantity <= 1 && this.cartCount > 0 && inCart == true){
-          this.products.splice(index,1);
-          let cart = {
-            cartCount: this.cartCount - 1,
-            products: this.products,
-            totalPrice: this.totalPrice - product.price
-          };
-          this.productService.setCart(cart);
-          inCart = false;
-          return;
-        };
+    const prod = this.products[index]
 
-      }
-    );
-      
+    if(prod.quantity > 1){
+      prod.quantity = prod.quantity -1
+    } 
+    else if(prod.quantity === 1){
+      this.products.splice(index,1);
+    }  
+
+    let cart = {
+      cartCount: this.cartCount - 1,
+      products: this.products,
+      totalPrice: this.totalPrice - prod.product.price
+    };
+    this.productService.setCart(cart);
   }
 
 }
