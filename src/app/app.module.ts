@@ -12,7 +12,7 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
 import { DisplayProductsComponent } from './components/display-products/display-products.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NgToastModule } from 'ng-angular-popup';
+import { DarkModeComponent } from './components/dark-mode/dark-mode.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +23,8 @@ import { NgToastModule } from 'ng-angular-popup';
     ProductCardComponent,
     CartComponent,
     CheckoutComponent,
-    DisplayProductsComponent
+    DisplayProductsComponent,
+    DarkModeComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +32,6 @@ import { NgToastModule } from 'ng-angular-popup';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    NgToastModule
   ],
   providers: [],
   bootstrap: [AppComponent]

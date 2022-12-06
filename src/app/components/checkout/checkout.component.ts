@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 import { Product } from 'src/app/models/product';
 import { ProductService } from 'src/app/services/product.service';
 import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
-import { NgToastService } from 'ng-angular-popup';
 
 @Component({
   selector: 'app-checkout',
@@ -33,7 +32,7 @@ export class CheckoutComponent implements OnInit {
     country: new UntypedFormControl('', Validators.required)
   });
 
-  constructor(private productService: ProductService, private router: Router, private toast: NgToastService) { }
+  constructor(private productService: ProductService, private router: Router) { }
 
   ngOnInit(): void {
     this.productService.getCart().subscribe(
@@ -58,15 +57,8 @@ export class CheckoutComponent implements OnInit {
 
     if(this.finalProducts.length > 0) {
       this.productService.purchase(this.finalProducts).subscribe(
-        // (resp) => console.log(resp)
-        res=>{
-          alert(res.message);
-          this.toast.success({detail:"successful", summary: "Purchase was Successful", duration:7000});
-        }
-        ,
-        err=> {
-          this.toast.error({detail:"error", summary: "Purchase was Unsuccessful", duration:7000})
-        },
+        (resp) => {alert("Purchase was completed"); console.log(resp)},
+        (err) => {alert("Make sure you use accurate information. Retry purchase."); console.log(err)},
         () => {
           let cart = {
             cartCount: 0,
