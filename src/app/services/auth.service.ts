@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { Address } from '../models/address';
 
 @Injectable({
   providedIn: 'root'
@@ -24,6 +25,11 @@ export class AuthService {
 
   register(firstName: string, lastName: string, email: string, password: string): Observable<any> {
     const payload = {firstName: firstName, lastName: lastName, email: email, password: password};
+    return this.http.post<any>(`${this.authUrl}/register`, payload, {headers: environment.headers});
+  }
+
+  saveUser(str: String): Observable<any>{
+    const payload = {};
     return this.http.post<any>(`${this.authUrl}/register`, payload, {headers: environment.headers});
   }
 }
