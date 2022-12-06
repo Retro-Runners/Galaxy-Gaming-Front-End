@@ -6,3 +6,9 @@ nav.dark-theme{
     background-color: #000000;
     color: #002dd1;
 }
+button.dark-theme{
+    background-color: #00e7ec;
+    color:#ffffff;
+    border-radius: 1px;
+    border-color: #ffffff;
+}

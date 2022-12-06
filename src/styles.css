@@ -4,11 +4,6 @@
     src: url('assets/fonts/Bungee-Regular.ttf');
 }
 
-* {
-    font-family: 'Roboto';
-}
-
-
 @font-face {
     font-family: 'Roboto-Black';
     src: url('assets/fonts/Roboto-Black.ttf')
@@ -47,20 +42,42 @@ body.dark-theme{
     background-color: #000000;
     color: #002dd1;
 }button{
-    background-color: #ece6c2;
+    background-color: #cc6b49;
+    color: #ffffff;
+    border-radius: 1px;
+    border-color: #ffffff;
+    font-family: 'Roboto-Thin';
 }
 button.dark-theme{
     background-color: #00e7ec;
-}
-.navbar{
-    background-color: #ece6c2;
-    color: #cc6b49;
-}
-.navbar.dark-theme{
-    background-color: #000000;
-    color: #002dd1;
+    color: #ffffff;
+    font-family: 'Roboto-Thin';
 }
 button:hover{
-    background-color: #73bda8;
+    background-color: #ffffff;
     color:#ece6c2;
+}
+span{
+    font-family: 'Roboto-Regular';
+}
+h1{
+    font-family: 'Bungee';
+}
+h2{
+    font-family: 'Bungee';
+}
+h3{
+    font-family: 'Roboto-Bold';
+}
+h4{
+    font-family: 'Roboto-Regular';
+}
+input{
+    font-family: 'Roboto-Thin';
+}
+h5{
+    font-family: 'Roboto-Thin';
+}
+h6{
+    font-family: 'Roboto-Light';
 }

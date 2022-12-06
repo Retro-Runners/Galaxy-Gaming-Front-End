@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
 
-<div class="container mt-5 px-5">
+<div class="container">
 
     <div class="mb-4">
 
@@ -25,7 +25,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="d-flex flex-row">
-                            <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control" required="required"> <span>Expiry</span> </div>
+                            <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control" required="required"> <span>Expiration Date</span> </div>
 
                         <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control" required="required"> <span>CVV</span> </div>
                         </div>                        
@@ -69,9 +69,9 @@
 
             <div class="mt-4 mb-4 d-flex justify-content-between">
 
-                <button class="btn btn-danger" [routerLink]="['/cart']">Back to Cart</button>
+                <button [routerLink]="['/cart']">Back to Cart</button>
 
-                <button class="btn btn-success px-3" role="alert" (click)="onSubmit();">Pay ${{totalPrice}}</button>
+                <button role="alert" (click)="onSubmit();">Pay ${{totalPrice}}</button>
 
             </div>
 
@@ -79,7 +79,7 @@
 
         <div class="col-md-4">
 
-            <div class="card card-blue p-3 text-white mb-3">
+            <div class="card card-blue p-3 mb-3">
 
             <span>You have to pay</span>
                 <div class="d-flex flex-row align-items-end mb-3">

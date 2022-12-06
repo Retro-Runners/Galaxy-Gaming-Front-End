@@ -33,7 +33,7 @@
       padding: 3%;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      column-gap: 60px;
+      column-gap: 50px;
     }
   }
 

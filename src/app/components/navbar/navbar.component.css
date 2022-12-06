@@ -1,8 +1,15 @@
 nav{
     background-color: #ece6c2;
     color: #cc6b49;
+    margin-bottom: 2%;
+    box-shadow: 4px 2px 0px #cc6b49;
 }
-nav.dark-theme{
-    background-color: #000000;
-    color: #002dd1;
+button{
+    font-family: 'Roboto-Regular';
+    background-color: #ece6c2;
+    color: #000000;
+    
+}
+.title{
+    font-size: 50px;
 }
