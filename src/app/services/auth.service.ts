@@ -29,7 +29,7 @@ export class AuthService {
   }
 
   saveUser(str: String): Observable<any>{
-    const payload = {};
-    return this.http.post<any>(`${this.authUrl}/register`, payload, {headers: environment.headers});
+    const payload = {Address: str};
+    return this.http.post<any>(`${this.authUrl}/setAddress`, payload, {headers: environment.headers});
   }
 }
