@@ -20,7 +20,7 @@ export class UserProfileComponent implements OnInit {
       address2:[''],
       city:[''],
       state:[''],
-      zipCode:[''],
+      zip:[''],
       country:['']
     });
    }
@@ -45,9 +45,8 @@ getEditProfileForm(){
 saveChanges(): void {
   if(this.user) {
     let address:string = this.user.firstName + '/' + this.user.lastName + '/' + this.user.address1 + '/' + 
-    this.user.address2 + '/' + this.user.city + '/' + this.user.state +
+    this.user.address2 + '/' + this.user.city + '/' + this.user.state + '/' +
     this.user.zip + '/' + this.user.country; 
-
     this.Auth.saveUser(address).subscribe();
   }
 }

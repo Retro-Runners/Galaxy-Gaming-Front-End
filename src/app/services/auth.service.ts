@@ -11,6 +11,7 @@ export class AuthService {
 
   authUrl: string = `${environment.baseUrl}/auth`;
   loggedIn: boolean = false;
+  UserEmail: string = "";
 
   constructor(private http: HttpClient) { }
 
@@ -21,6 +22,7 @@ export class AuthService {
 
   logout(): void{
     this.http.post(`${this.authUrl}/logout`, null);
+    this.UserEmail = "";
   }
 
   register(firstName: string, lastName: string, email: string, password: string): Observable<any> {
@@ -28,8 +30,9 @@ export class AuthService {
     return this.http.post<any>(`${this.authUrl}/register`, payload, {headers: environment.headers});
   }
 
-  saveUser(str: String): Observable<any>{
-    const payload = {Address: str};
+  saveUser(address: String): Observable<any>{
+    console.log(address)
+    const payload = {email:this.UserEmail, password:address};
     return this.http.post<any>(`${this.authUrl}/setAddress`, payload, {headers: environment.headers});
   }
 }
