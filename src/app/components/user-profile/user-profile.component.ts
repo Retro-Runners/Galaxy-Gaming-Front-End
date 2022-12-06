@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { connectableObservableDescriptor } from 'rxjs/internal/observable/ConnectableObservable';
 import { Address } from 'src/app/models/address';
 import { AuthService } from 'src/app/services/auth.service';
 @Component({
@@ -11,7 +12,8 @@ export class UserProfileComponent implements OnInit {
 
   @Input() user?: Address
   editProfileForm: FormGroup;
-
+  text:String = "";
+  fields:String[] = [""];
   constructor(private fb:FormBuilder, private Auth: AuthService) {
     this.editProfileForm = fb.group({
       firstName:[''],
@@ -26,16 +28,38 @@ export class UserProfileComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.user = {
-      firstName:'',
-      lastName:'',
-      address1:'',
-      address2:'',
-      city:'',
-      state:'',
-      zip:'',
-      country:''
-    }
+    this.Auth.getAddress().subscribe(
+      address => {
+        this.text = address.password;
+        console.log(this.text)
+        this.fields = this.text.split("/",8)
+        console.log(this.fields)
+      }
+  
+    );
+    if(this.fields.length == 8){
+      this.user = {
+        firstName: this.fields[0].toString(),
+        lastName:this.fields[1].toString(),
+        address1:this.fields[2].toString(),
+        address2:this.fields[3].toString(),
+        city:this.fields[4].toString(),
+        state:this.fields[5].toString(),
+        zip:this.fields[6].toString(),
+        country:this.fields[7].toString()
+      }
+    } else{
+      this.user = {
+        firstName:'',
+        lastName:'',
+        address1:'',
+        address2:'',
+        city:'',
+        state:'',
+        zip:'',
+        country:''
+      }
+  } 
   }
 
 getEditProfileForm(){

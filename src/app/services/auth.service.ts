@@ -35,4 +35,9 @@ export class AuthService {
     const payload = {email:this.UserEmail, password:address};
     return this.http.post<any>(`${this.authUrl}/setAddress`, payload, {headers: environment.headers});
   }
+
+  getAddress(): Observable<any>{
+    const payload = {email:this.UserEmail, password:""};
+    return this.http.post<any>(`${this.authUrl}/getAddress`, payload, {headers: environment.headers});
+  }
 }
