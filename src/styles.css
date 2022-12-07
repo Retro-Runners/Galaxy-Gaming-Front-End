@@ -92,3 +92,9 @@ label{
     font-family: 'Roboto-Regular';
     margin-bottom: 1%;
 }
+table{
+    background-color: #cc6b49;
+}
+table.dark-theme{
+    background-color: #ece6c2;
+}
