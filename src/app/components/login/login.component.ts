@@ -25,6 +25,7 @@ export class LoginComponent implements OnInit {
     this.authService.login(this.loginForm.get('email')?.value, this.loginForm.get('password')?.value).subscribe(
       () => {
         this.authService.loggedIn=true;
+        this.authService.UserEmail=this.loginForm.get('email')?.value;
       },
       (err) => {alert("Unable to log in. Make sure you are registered."); console.log(err)},
       () => this.router.navigate(['home'])
