@@ -47,11 +47,15 @@ body.dark-theme{
     border-radius: 1px;
     border-color: #ffffff;
     font-family: 'Roboto-Thin';
+    margin-right: 5%;
 }
 button.dark-theme{
     background-color: #00e7ec;
     color: #ffffff;
+    border-radius: 1px;
+    border-color: #ffffff;
     font-family: 'Roboto-Thin';
+    margin-right: 5%;
 }
 button:hover{
     background-color: #ffffff;
