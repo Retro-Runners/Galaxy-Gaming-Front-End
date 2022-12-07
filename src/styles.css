@@ -48,6 +48,7 @@ body.dark-theme{
     border-color: #ffffff;
     font-family: 'Roboto-Thin';
     margin-right: 5%;
+    margin-bottom: 5%;
 }
 button.dark-theme{
     background-color: #00e7ec;

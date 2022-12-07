@@ -37,7 +37,8 @@
           <input id="country" type="text" [(ngModel)]="user.country" value = {{user.country}} formControlName="country" placeholder="country name">
           <br>
           <br>
-            <button type="submit">Save</button>
+          <button [routerLink]="['/home']">Back</button>
+          <button type="submit">Save</button>
         </form>
 
 

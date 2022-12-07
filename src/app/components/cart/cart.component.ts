@@ -10,6 +10,7 @@ import { ProductService } from 'src/app/services/product.service';
 })
 export class CartComponent implements OnInit {
 
+  cartCount!:number
   products: {
     product: Product,
     quantity: number
@@ -41,4 +42,27 @@ export class CartComponent implements OnInit {
     this.router.navigate(['/home']);
   }
 
+  removeFromCart(product: {
+    product: Product,
+    quantity: number
+  }): void {
+
+    let index = this.products.indexOf(product)
+
+    const prod = this.products[index]
+
+    if(prod.quantity > 1){
+      prod.quantity = prod.quantity - 1
+    } 
+    else if(prod.quantity === 1){
+      this.products.splice(index,1);
+    }
+
+    let cart = {
+      cartCount: this.cartCount - 1,
+      products: this.products,
+      totalPrice: this.totalPrice - prod.product.price
+    };
+    this.productService.setCart(cart);
+  }
 }

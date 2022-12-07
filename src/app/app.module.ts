@@ -24,7 +24,9 @@ import { DarkModeComponent } from './components/dark-mode/dark-mode.component';
     ProductCardComponent,
     CartComponent,
     CheckoutComponent,
-    DisplayProductsComponent
+    DisplayProductsComponent,
+    UserProfileComponent,
+    DarkModeComponent
   ],
   imports: [
     BrowserModule,

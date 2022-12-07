@@ -8,6 +8,9 @@
             Cart
             <span class="badge badge-secondary">{{cartCount}}</span>
         </button>
+        <button class="btn" [routerLink]="['/userprof']">
+            User Profile
+        </button>
         <button class="btn my-2 my-sm-0" (click)="logout();">Logout</button>
     </form>
 </nav>

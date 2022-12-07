@@ -3,6 +3,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { connectableObservableDescriptor } from 'rxjs/internal/observable/ConnectableObservable';
 import { Address } from 'src/app/models/address';
 import { AuthService } from 'src/app/services/auth.service';
+
 @Component({
   selector: 'app-user-profile',
   templateUrl: './user-profile.component.html',
@@ -10,7 +11,16 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class UserProfileComponent implements OnInit {
 
-  @Input() user?: Address
+  @Input() user: Address ={
+    firstName: "",
+    lastName: "",
+    address1: "",
+    address2: "",
+    city: "",
+    state: "",
+    zip: "",
+    country: ""
+  };
   editProfileForm: FormGroup;
   text:String = "";
   fields:String[] = [""];
