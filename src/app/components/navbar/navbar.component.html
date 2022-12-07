@@ -1,16 +1,20 @@
 <nav class="navbar">
     <h4 class="title" style="font-family: Bungee;">
-        <img src="../../../assets/images/GalaxyGamesLight.png" width="20%" height="20%" alt="Revature">
+        <img src="../../../assets/images/GalaxyGamesLight.png" width="15%" height="15%" alt="Revature">
         By Retro Runners
     </h4>
-    <form class="form-inline">
+    <div>
         <button class="btn" [routerLink]="['/cart']">
             Cart
             <span class="badge badge-secondary">{{cartCount}}</span>
         </button>
+    </div>
+    <div>
         <button class="btn" [routerLink]="['/userprof']">
             User Profile
         </button>
-        <button class="btn my-2 my-sm-0" (click)="logout();">Logout</button>
-    </form>
+    </div>
+    <div>
+        <button class="btn" (click)="logout();">Logout</button>
+    </div>
 </nav>

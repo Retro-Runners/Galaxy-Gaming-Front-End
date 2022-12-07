@@ -4,7 +4,8 @@
     background-color: #ece6c2;
     color: #000000;
     font-family: 'Roboto-Thin';
-
+    margin-left: auto;
+    margin-right: auto;
 }
 
 th {

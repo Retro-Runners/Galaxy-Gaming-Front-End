@@ -10,7 +10,7 @@ import { ProductService } from 'src/app/services/product.service';
 })
 export class CartComponent implements OnInit {
 
-  cartCount!:number
+  cartCount!: number;
   products: {
     product: Product,
     quantity: number
@@ -18,11 +18,13 @@ export class CartComponent implements OnInit {
   totalPrice!: number;
   cartProducts: Product[] = [];
 
+
   constructor(private productService: ProductService, private router: Router) { }
 
   ngOnInit(): void {
     this.productService.getCart().subscribe(
       (cart) => {
+        this.cartCount = cart.cartCount;
         this.products = cart.products;
         this.products.forEach(
           (element) => this.cartProducts.push(element.product)
@@ -33,12 +35,12 @@ export class CartComponent implements OnInit {
   }
 
   emptyCart(): void {
-    let cart = {
+    let cartProducts = {
       cartCount: 0,
       products: [],
       totalPrice: 0.00
     };
-    this.productService.setCart(cart);
+    this.productService.setCart(cartProducts);
     this.router.navigate(['/home']);
   }
 

@@ -49,6 +49,7 @@ body.dark-theme{
     font-family: 'Roboto-Thin';
     margin-right: 5%;
     margin-bottom: 5%;
+    margin-left: 3%;
 }
 button.dark-theme{
     background-color: #00e7ec;
@@ -79,6 +80,7 @@ h4{
 }
 input{
     font-family: 'Roboto-Thin';
+    margin-bottom: 2%;
 }
 h5{
     font-family: 'Roboto-Thin';
@@ -88,4 +90,5 @@ h6{
 }
 label{
     font-family: 'Roboto-Regular';
+    margin-bottom: 1%;
 }
