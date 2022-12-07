@@ -57,8 +57,8 @@ export class CheckoutComponent implements OnInit {
 
     if(this.finalProducts.length > 0) {
       this.productService.purchase(this.finalProducts).subscribe(
-        (resp) => console.log(resp),
-        (err) => console.log(err),
+        (resp) => {alert("Purchase was completed"); console.log(resp)},
+        (err) => {alert("Make sure you use accurate information. Retry purchase."); console.log(err)},
         () => {
           let cart = {
             cartCount: 0,

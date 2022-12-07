@@ -1,9 +1,17 @@
 .table 
 {
     margin: 3%;
+    background-color: #ece6c2;
+    color: #000000;
+    font-family: 'Roboto-Thin';
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.btn
-{
-    margin-left: 2%;
-}
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #cc6b49;
+    color: white;
+  }

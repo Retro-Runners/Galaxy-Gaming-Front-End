@@ -1,0 +1,56 @@
+<app-navbar></app-navbar>
+<div class="container" *ngIf="user">
+    <div class="header">
+    </div>
+    <hr>
+    <div class = "userInfo">
+        <form [formGroup]="editProfileForm" (ngSubmit) = "saveChanges()">
+          <label for="firstName">First Name: </label>
+          <br>
+          <input id="firstName" type="text" [(ngModel)]="user.firstName" value = {{user.firstName}} formControlName="firstName" placeholder="first name">
+          <br>
+          <br>
+          <label for="lastName">Last Name: </label>
+          <br>
+          <input id="lastName" type="text" [(ngModel)]="user.lastName" value = {{user.lastName}} formControlName="lastName" placeholder="last name">
+          <br>
+          <br>
+          <label for="address1">Address 1: </label>
+          <br>
+          <input id="address1" type="text" [(ngModel)]="user.address1" value = {{user.address1}} formControlName="address1" placeholder="address 1">
+          <br>
+          <br>
+          <label for="address2">Address 2: </label>
+          <br>
+          <input id="address2" type="text" [(ngModel)]="user.address2" value = {{user.address2}} formControlName="address2" placeholder="address 2">
+          <br>
+          <br>
+          <label for="city">City: </label>
+          <br>
+          <input id="city" type="text" [(ngModel)]="user.city" value = {{user.city}} formControlName="city" placeholder="city name">
+          <br>
+          <br>
+          <label for="state">State: </label>
+          <br>
+          <input id="state" type="text" [(ngModel)]="user.state" value = {{user.state}} formControlName="state" placeholder="state name">
+          <br>
+          <br>
+          <label for="country">Country: </label>
+          <br>
+          <input id="country" type="text" [(ngModel)]="user.country" value = {{user.country}} formControlName="country" placeholder="country name">
+          <br>
+          <br>
+          <label for="zip">Zip Code: </label>
+          <br>
+          <input id="zip" type="text" [(ngModel)]="user.zip" value = {{user.zip}} formControlName="zip" placeholder="zip code">
+          <br>
+          <br>
+          
+          <button [routerLink]="['/home']">Back</button>
+          <button type="submit">Save</button>
+        </form>
+
+
+    </div>
+  
+  </div>

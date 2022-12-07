@@ -1,4 +1,8 @@
-<img src="../../../assets/images/rev-logo.png" width="30%" height="30%" alt="Revature">
+<div class="logo">
+  <img src="../../../assets/images/GalaxyGamesLight.png" width="30%" height="30%" alt="Galaxy Games">
+  <br>
+</div>
+<div>
 <form id="login-form" [formGroup]="loginForm">
     <div class="form-group">
       <label for="exampleInputEmail1">Email address</label>
@@ -9,6 +13,10 @@
       <label for="exampleInputPassword1">Password</label>
       <input type="password" class="form-control" formControlName="password" id="exampleInputPassword1" placeholder="Password">
     </div>
-    <button class="btn btn-primary" (click)="onSubmit()">Login</button>
-    <button class="btn btn-primary" [routerLink]="['/register']">Register</button>
+    <div class="buttonGroup">
+      <button (click)="onSubmit()">Login</button>
+      <button [routerLink]="['/register']">Register</button>
+    </div>
+    
 </form>
+</div>

@@ -12,6 +12,8 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
 import { DisplayProductsComponent } from './components/display-products/display-products.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { DarkModeComponent } from './components/dark-mode/dark-mode.component';
 
 @NgModule({
   declarations: [
@@ -22,14 +24,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ProductCardComponent,
     CartComponent,
     CheckoutComponent,
-    DisplayProductsComponent
+    DisplayProductsComponent,
+    UserProfileComponent,
+    DarkModeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
