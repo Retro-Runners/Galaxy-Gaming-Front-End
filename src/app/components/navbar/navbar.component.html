@@ -4,11 +4,11 @@
         Revature Swag Shop
     </h4>
     <form class="form-inline">
+        <button [routerLink]="['/userprof']">Profile</button>
         <button class="btn btn-light" [routerLink]="['/cart']">
             Cart
             <span class="badge badge-info">{{cartCount}}</span>
         </button>
         <button class="btn btn-outline-danger my-2 my-sm-0" (click)="logout();">Logout</button>
-        <button [routerLink]="['/address']">address</button>
     </form>
 </nav>

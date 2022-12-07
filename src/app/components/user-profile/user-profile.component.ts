@@ -32,35 +32,26 @@ export class UserProfileComponent implements OnInit {
       address => {
         this.text = address.password;
         console.log(this.text)
+        if(this.text != null){
         this.fields = this.text.split("/",8)
-        console.log(this.fields)
+      } else{
+        this.fields = ["","","","","","","",""]
+      }
+        console.log(this.fields);
+        this.user = {
+          firstName: this.fields[0].toString(),
+          lastName:this.fields[1].toString(),
+          address1:this.fields[2].toString(),
+          address2:this.fields[3].toString(),
+          city:this.fields[4].toString(),
+          state:this.fields[5].toString(),
+          zip:this.fields[6].toString(),
+          country:this.fields[7].toString()
+        }
       }
   
     );
-    if(this.fields.length == 8){
-      this.user = {
-        firstName: this.fields[0].toString(),
-        lastName:this.fields[1].toString(),
-        address1:this.fields[2].toString(),
-        address2:this.fields[3].toString(),
-        city:this.fields[4].toString(),
-        state:this.fields[5].toString(),
-        zip:this.fields[6].toString(),
-        country:this.fields[7].toString()
-      }
-    } else{
-      this.user = {
-        firstName:'',
-        lastName:'',
-        address1:'',
-        address2:'',
-        city:'',
-        state:'',
-        zip:'',
-        country:''
-      }
   } 
-  }
 
 getEditProfileForm(){
   return this.editProfileForm.controls;
