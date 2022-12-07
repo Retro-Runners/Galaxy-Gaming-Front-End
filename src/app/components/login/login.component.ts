@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
       () => {
         this.authService.loggedIn=true;
       },
-      (err) => console.log(err),
+      (err) => {alert("You have entered invalid credentials or need to register!");console.log(err)},
       () => this.router.navigate(['home'])
     );
   }
